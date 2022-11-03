@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) {
+    Scanner s=new Scanner (System.in);
+    String a=s.nextLine();
+    int o=0,u=0;
+    String c="";
+    String []b=a.split(" ");
+    for(int i=0;i<b.length;i++){
+    if(b[i].length()<10){
+        c+=Integer.toString(b[i].length());
+    }
+    else if(b[i].length()>=10){
+         u=b[i].length();
+        while(u>=10){
+           while(u>0){
+             o+=u%10;
+             u=u/10;
+        }
+        u=o;
+        }
+       c=c+Integer.toString(u);  
+    }
+    }
+   
+    System.out.println(c);
+    }
+
+}
